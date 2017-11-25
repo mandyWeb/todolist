@@ -1,0 +1,32 @@
+body {
+		margin: 0;
+		font-family: Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif";
+	}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+figure {
+	margin: 0;
+}
+ul,ol {
+	padding: 0;
+	margin: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	/* img用a标签包起来 ie6-10 会出现蓝色边框 */
+	border: 0;
+}
+
+h3::selection { background:#d3d3d3; color:#fff;}
+h3::-moz-selection { background:#d3d3d3; color:#fff;}
+
+/*  text-overflow: ellipsis ;   文字超出显示省略号 */
