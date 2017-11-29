@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html ng-app="myapp">
 <head>
@@ -107,4 +108,115 @@
 	</div>
 
 </body>
+=======
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="iconfont/iconfont.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="icon/iconfont.css"/>
+	<script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body ng-controller="c">
+<!-- 左侧栏目 -->
+	<div class="menu">
+		<div class="title">
+			<div class="logo">
+				<img src="image/2017-11-13_155001.jpg" alt="">
+			</div>
+			<div class="add"
+				ng-click="addItem()"
+			>
+				<i class="iconfont" >&#xe601;</i>
+			</div>
+		</div>
+		<div class="con">
+			<div class="list" ng-repeat="v in todos" ng-click="passData(v)" ng-class="{'active':v.tid==idx+1}">
+
+				<h3>{{v.title}}</h3>
+				<span>{{v.todo.length}} 项</span>
+				<i class="iconfont" ng-click="deltt()">&#xe602;</i>
+				
+			</div>
+		</div>
+	</div>
+
+
+<!-- 右侧栏目 -->
+	<div class="content">
+		<div class="title">
+			<span class="iconfont">&#xe675;</span>
+			<div class="titL">{{todos[idx].title}}</div>
+			<div class="titR iconfont"  ng-click="changeTit(todos[idx])">&#xe64e;</div>
+		</div>
+		<div class="con">
+			<div class="doing">
+				<div class="doingTit">
+					<i class="iconfont" ng-click="listHide()" ng-class="{true:'active',fasle:'iconfont'}[flag]">&#xe641;</i>
+					正在进行 {{(todos[idx].todo | filter:{status: false}).length }} 项
+				</div>
+				<ul class="doingCon">
+					<li ng-repeat="v in todos[idx].todo | filter:{status: false}" 
+					ng-hide="listHid"  > 
+						<input type="checkbox" ng-click="v.status=true">
+						<div contenteditable ng-blur="xiugai($event,v)" ng-bind="v.work"></div>
+						<span class="iconfont" ng-click="del(v)">&#xe602;</span>
+					</li>
+				</ul>
+			</div>
+			<ul class="done">
+				<div class="doneTit">
+					
+					<i class="iconfont" ng-click="listHide1()" ng-class="{true:'active',fasle:'iconfont'}[flag2]">&#xe641;</i>
+					已经完成 {{(todos[idx].todo | filter:{status: true}).length }} 项
+				</div>
+				<ul class="doneCon">
+					<li ng-repeat="v in todos[idx].todo | filter:{status: true}"  ng-hide="listHid1"
+						
+					>
+						<input type="checkbox" ng-click="v.status=false" checked>
+						<div contenteditable>{{v.work}}</div>
+						<span class="iconfont" ng-click="del(v)">&#xe602;</span>
+					</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+
+
+<!-- 显示影藏TIPS -->
+	<div class="add-tips" ng-show="showTip">
+		<div class="add-tit">添加分类</div>
+		<input type="text" class="addCon" ng-model="tit">
+		<div class="sure" ng-click="sure()">确定</div>
+		<div class="cancel" ng-click="showTip=false">取消</div>
+	</div>
+
+<!-- 显示设置 -->
+	<div class="setting" ng-show="showSetting">
+		<div class="add-tit">修改分类</div>
+		<input type="text" class="settingCon" ng-model="settingTit">
+		<div class="settingsure" ng-click="sureSetting(todos[idx])">确定</div>
+		<div class="settingcancel" ng-click="showSetting=false">取消</div>
+	</div>
+	<div class="append" ng-click="addDoing()">
+		<i class="iconfont">&#xe601;</i>
+	</div>
+	
+	
+	<!-- 显示设置 -->
+	<div class="setting" ng-show="deltt1">
+		<div class="add-tit">删除分类</div>
+		<p >您目前还有 {{todos[idx]['todo'].length}} 项事物</p>
+		<p>请确认是否删除</p>
+		<div class="settingsure" ng-click="delbig(idx)">确定</div>
+		<div class="settingcancel" ng-click="deltt1=false">取消</div>
+	</div>
+
+</body>
+>>>>>>> 3397cb9d087611e28dca50a82b469f12978b0a67
 </html>
