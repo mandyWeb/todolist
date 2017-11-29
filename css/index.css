@@ -1,0 +1,364 @@
+html,body {
+	height: 100%;
+}
+body {
+	display: flex;
+}
+.menu {
+	width: 240px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid #CCCCCC;
+}
+.menu .title{
+	height: 70px;
+	background: #3A9BFF;
+}
+.menu .title .logo {
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	float: left;
+}
+.menu .title .logo img {
+	width: 50px;
+	height: 50px;
+}
+.menu .title .add {
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	float: right;
+	color: white;
+	text-align: center;
+}
+.menu .title .add i {
+	line-height: 50px;
+	font-size: 30px;
+}
+.menu .title .add i:hover {
+	color: rgba(255,255,255,.7)
+}
+
+.menu .con {
+	height: 100%；
+	flex-grow: 1;
+	overflow: auto;
+}
+.menu .con .list {
+	width: 50%;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	height: 120px;
+	box-sizing: border-box;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+.menu .con .list .iconfont{
+	font-size: 24px;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	color: red;
+	display: none;
+	cursor: pointer;
+}
+.menu .con .list:hover .iconfont{
+	display: block;
+}
+.menu .con .list.active {
+	background: #eee;
+}
+.menu .con .list h3 {
+	text-overflow: ;
+	user-select:none;
+	-webkit-user-select:none;
+}
+.content {
+	background: #eee;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+.content .title {
+	width: 100%;
+	height: 70px;
+	background: #3A9BFF;
+	display: flex;
+}
+.content .title span {
+	width: 50px;
+	height: 50px;
+	font-size: 35px;
+	color: white;
+	line-height: 50px;
+	margin: 10px 0px 10px 20px;
+}
+.content .title .titL {
+	flex-grow: 1;
+	font-size: 27px;
+	color: white;
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	margin: 10px 0;
+}
+.content .title .titR {
+	font-size: 35px;
+	color: white;
+	line-height: 50px;
+	width: 50px;
+	height: 50px;
+	margin: 10px 0;
+	overflow: auto;
+}
+.content .con {
+	width: 100%;
+	flex-grow: 1;
+	
+}
+.content .con .doing .doingCon{
+	overflow:auto;
+}
+.content .con .doing .doingCon li {
+	font-size: 18px;
+	background: white;
+	border-bottom: 1px solid #ccc;
+	line-height: 40px;
+	overflow: hidden;
+	height: 40px;
+}
+
+.content .con .doing .doingCon li span{
+	float: right;
+	font-size: 30px;
+	color: red;
+	cursor: pointer;
+	padding-right: 20px;
+}
+.content .con .doing .doingCon li:last-child {
+	border-bottom: 1px solid #3A9BFF;
+}
+.content .con .doing .doingCon li input {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+}
+.content .con .doing .doingCon li div{
+	float: left;
+	padding: 0px 10px;
+	width: 70%;
+}
+.content .doingTit {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #3A9BFF;
+	background: white;
+	font-size: 20px;
+	line-height: 50px;
+}
+.content .doingTit i {
+	font-size: 18px;
+	color: #3A9BFF;
+	margin-right: 10px;
+	margin-left: 10px;
+	transform: rotate(-90deg);
+	display: inline-block;
+	transition: all .3s;
+}
+.content .doingTit .active {
+	transform: rotate(0deg);
+}
+
+.content .con .done .doneCon{
+	overflow:auto;
+}
+
+.content .con .done .doneCon li {
+	font-size: 18px;
+	background: white;
+	border-bottom: 1px solid #ccc;
+	line-height: 40px;
+	overflow: hidden;
+	height: 40px;
+}
+.content .con .done .doneCon li div{
+	float: left;
+	padding: 0px 10px;
+	width: 70%;
+}
+.content .con .done .doneCon li:last-child {
+	border-bottom: 1px solid #3A9BFF;
+	
+}
+.content .con .done .doneCon li input {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+}
+.content .con .done .doneCon li span{
+	float: right;
+	font-size: 30px;
+	color: red;
+	cursor: pointer;
+	padding-right: 20px;
+}
+.content .doneTit {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #3A9BFF;
+	background: white;
+	font-size: 20px;
+	line-height: 50px;
+}
+.content .doneTit i {
+	font-size: 18px;
+	color: #3A9BFF;
+	margin-right: 10px;
+	margin-left: 10px;
+	transform: rotate(-90deg);
+	display: inline-block;
+	transition: all .3s;
+}
+.content .doneTit .active {
+	transform: rotate(0deg);
+}
+
+
+
+
+.add-tips {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 400px;
+	height: 300px;
+	background: #fff;
+	padding: 0px 20px;
+}
+.add-tips .add-tit {
+	width: 100%;
+	background: #3A9BFF;
+	text-align: center;
+	color: white;
+	height: 50px;
+	line-height: 50px;
+	font-size: 26px;
+}
+.add-tips input {
+	width: 99%;
+	height: 40px;
+	border: 1px solid #3A9BFF;
+	font-size: 24px;
+	margin-top: 50px;
+}
+.add-tips .sure {
+	width: 20%;
+	height: 30px;
+	background: chartreuse;
+	color: white;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+	margin-left: 100px;
+	margin-top: 20%;
+}
+.add-tips .cancel {
+	width: 20%;
+	height: 30px;
+	background: #3A9BFF;
+	color: white;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	float: right;
+	margin-right: 100px;
+	margin-top: 20%;
+}
+
+
+
+.setting {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 400px;
+	height: 300px;
+	background: #fff;
+	padding: 0px 20px;
+}
+.setting .add-tit {
+	width: 100%;
+	background: #3A9BFF;
+	text-align: center;
+	color: white;
+	height: 50px;
+	line-height: 50px;
+	font-size: 26px;
+	margin-bottom: 20px;
+}
+.setting input {
+	width: 99%;
+	height: 40px;
+	border: 1px solid #3A9BFF;
+	font-size: 24px;
+}
+.setting .settingsure {
+	width: 20%;
+	height: 30px;
+	background: chartreuse;
+	color: white;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+	margin-left: 100px;
+	margin-top: 20%;
+}
+.setting .settingcancel {
+	width: 20%;
+	height: 30px;
+	background: #3A9BFF;
+	color: white;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	float: right;
+	margin-right: 100px;
+	margin-top: 20%;
+}
+
+
+.append{
+	
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+}
+.append .iconfont{
+	font-size: 40px;
+	color: #3A9BFF;
+	
+}
+.setting p{
+	line-height: 30px;
+	text-align: center;
+	font-size: 24px;
+	
+}
